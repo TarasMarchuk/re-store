@@ -13,12 +13,13 @@ class BookList extends Component {
     const { bookstoreService } = this.props;
     const data = bookstoreService.getBooks();
     this.props.booksLoaded(data);
+    console.log('test',data);
   }
 
   render() {
     const { books } = this.props;
     return (
-      <ul>
+      <ul className="book-list">
         {
           books.map((book) => {
             return (
